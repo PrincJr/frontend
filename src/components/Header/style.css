@@ -1,0 +1,59 @@
+header {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header>.container {
+    height: 54px;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 975px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header>.container>.container-image {
+    flex: 1;
+}
+
+header>.container>.input-container {
+    min-width: 125px;
+    width: 215px;
+    height: 28px;
+}
+
+header>.container>.input-container>input {
+    border: solid 1px #dbdbdb;
+    background: #fafafa;
+    font-size: 16px;
+    border-radius: 3px;
+    color: #262626;
+    padding: 3px 10px 3px 26px;
+    z-index: 2;
+}
+
+header>.container>.container-icons{
+    flex: 1 0 0%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: row;
+}
+
+header>.container>.container-icons>.icons {
+    display: flex;
+    justify-self: stretch;
+    flex-direction: row;
+    padding-left: 24px;
+    white-space: nowrap;
+}
+
+header>.container>.container-icons>.icons>a:not(:first-child) {
+    margin-left: 22px;
+}

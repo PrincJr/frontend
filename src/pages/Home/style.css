@@ -1,0 +1,25 @@
+.home {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 935px;
+    flex-grow: 1;
+    margin: 0 auto;
+    width: 100%;
+    align-items: stretch;
+}
+
+.home>.post_container {
+    float: left;
+    margin-right: 28px;
+    max-width: 614px;
+    width: 100%;
+    align-items: stretch;
+    border: 0 solid #000;
+}
+
+@media (min-width: 640px) {
+    .home {
+        padding-top: 30px;
+    }
+}
+
