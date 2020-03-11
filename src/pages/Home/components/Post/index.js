@@ -8,7 +8,7 @@ export default class Post extends Component {
     render() {
         return (
             <article className="post">
-                <header>
+                <div className="header-post">
                     <div className="photography">
                         <img src="https://instagram.fnat1-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83584403_672321270252727_2207677391315140608_n.jpg?_nc_ht=instagram.fnat1-1.fna.fbcdn.net&_nc_ohc=eDOz_406KYwAX-0YqKI&oh=66ff81a6aa67c617740eaf0a2e51bb72&oe=5E966747"
                             alt="foto perfil de quem postou" />
@@ -16,7 +16,7 @@ export default class Post extends Component {
                     <div className="container-post">
                         <h5>Júnior Silva</h5>
                     </div>
-                </header>
+                </div>
                 <div className="container-pub">
                     <img src="https://instagram.fnat1-1.fna.fbcdn.net/v/t51.2885-15/e35/89602911_206222990739754_2311956367490192721_n.jpg?_nc_ht=instagram.fnat1-1.fna.fbcdn.net&_nc_cat=1&_nc_ohc=ijJcRrAepjAAX8Q9dv1&oh=eef132fc2851aac88542a13010b4524c&oe=5E9A0A81" alt="post-img" />
                 </div>
