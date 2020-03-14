@@ -1,7 +1,10 @@
 import produce from 'immer';
+
+const posts = []
+
 const INITIAL_STATE = {
   isLoading: false,
-  posts: [],
+  posts,
 };
 
 export default function general(state = INITIAL_STATE, action) {
@@ -9,7 +12,7 @@ export default function general(state = INITIAL_STATE, action) {
     case '@general/setPosts':
       return produce(state, draft => {
         draft.posts = action.payload.data;
-      });
+      });   
     default:
       return state;
   }

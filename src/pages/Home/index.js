@@ -43,7 +43,7 @@ export default function Home() {
             <div className="post_container">
                 {
                     posts.map((i, index) => (
-                        <Post item={i} key={index} />
+                        <Post item={i} key={index} index={index}/>
                     ))
                 }
             </div>
