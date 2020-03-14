@@ -60,3 +60,9 @@ header>.container>.container-icons>.icons {
 header>.container>.container-icons>.icons>div:not(:first-child) {
     margin-left: 22px;
 }
+
+header>.container>.container-icons>.icons>div>img {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
