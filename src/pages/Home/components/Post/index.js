@@ -1,19 +1,31 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 
 import { ReactComponent as Like } from '../../../../assets/icons/like.svg'
 import { ReactComponent as LikeActive } from '../../../../assets/icons/like_active.svg'
 import { ReactComponent as Comment } from '../../../../assets/icons/comment.svg'
 import { ReactComponent as Send } from '../../../../assets/icons/send.svg'
-import { ReactComponent as save } from '../../../../assets/icons/send.svg'
+import { ReactComponent as Save } from '../../../../assets/icons/send.svg'
 
 import './style.css'
 
-import * as GeneralAction from '../../../../storage/modules/general/actions'
-
-export default function Post({ item, index }) {
+export default function Post({ item }) {
 
     const [isLike, setIsLike] = useState(false)
+
+    const [comments, setComments] = useState([])
+
+    const [comment, setComment] = useState(null)
+
+    const handleChange = (event) => {
+        setComment(event.target.value)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        comments.push(comment)
+        setComment("")
+    }
 
     return (
         <article className="post">
@@ -34,8 +46,8 @@ export default function Post({ item, index }) {
                 <section className="tools">
                     <span>
                         {
-                            !isLike ? <Like onClick={() => setIsLike(true) } /> :
-                                      <Like onClick={() => setIsLike(false) } />
+                            !isLike ? <Like onClick={() => setIsLike(true)} /> :
+                                <LikeActive onClick={() => setIsLike(false)} />
 
                         }
                     </span>
@@ -46,12 +58,22 @@ export default function Post({ item, index }) {
                         <Send />
                     </span>
                     <span className="save">
-
+                        <Save />
                     </span>
                 </section>
+                <section >
+                    {
+                        comments.map((i, index) => (
+                            <div key={index}>
+                                <span><strong>bendevoficial </strong>{i}</span>
+                            </div>
+                        ))
+                    }
+                </section>
+
                 <section className="coment">
-                    <form>
-                        <textarea placeholder="Adicione um comentário..."></textarea>
+                    <form onSubmit={handleSubmit}>
+                        <textarea placeholder="Adicione um comentário..." onChange={handleChange} value={comment}></textarea>
                         <button type="submit">Publicar</button>
                     </form>
                 </section>

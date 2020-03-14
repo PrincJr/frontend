@@ -11,6 +11,17 @@ h5 {
   margin: 0;
 }
 
+input:focus,
+button:focus,
+svg:focus,
+span:focus,
+input:active,
+button:active,
+svg:active,
+span:active {
+  outline: 0 !important;
+}
+
 #root {
   min-height: 100%;
   overflow: hidden;
